@@ -1,0 +1,67 @@
+---
+const author = "Abhay Patil"
+const github = "https://github.com/VulcanRaven737"
+---
+
+<section class="relative flex items-center justify-center h-full w-full">
+  <!-- Loader -->
+  <div class="loader h-full w-full flex justify-center items-center">
+    <!-- Bouncing Dots -->
+    <div class="dot-container">
+      <div class="dot dot1"></div>
+      <div class="dot dot2"></div>
+      <div class="dot dot3"></div>
+    </div>
+  </div>
+
+  <!-- Author Details -->
+  <div class="absolute bottom-0 right-0 text-right">
+    <h2 class="text-xs font-medium tracking-wider leading-3">{author}</h2>
+    <a href={github} class="text-[10px] tracking-wider text-blue-500" target="_blank">GitHub Profile</a>
+  </div>
+</section>
+
+<style scoped>
+.loader {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot-container {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
+}
+
+.dot1 {
+    animation-delay: 0s;
+}
+
+.dot2 {
+    animation-delay: 0.2s;
+}
+
+.dot3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+</style>
+
